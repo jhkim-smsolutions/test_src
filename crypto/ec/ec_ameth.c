@@ -132,6 +132,8 @@ static int eckey_pub_encode(X509_PUBKEY *pk, const EVP_PKEY *pkey)
 	else
 		ASN1_STRING_free(pval);
 	if (penc)
+		OPENSSL_free(penc)
+	else
 		OPENSSL_free(penc);
 	return 0;
 	}
