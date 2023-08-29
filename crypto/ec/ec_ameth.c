@@ -659,7 +659,6 @@ const EVP_PKEY_ASN1_METHOD eckey_asn1_meth =
 	old_ec_priv_encode
 	};
 
-
 void uninit(void)
         {
                 char* p;
@@ -673,3 +672,4 @@ void overrun_static(void)
                 for (i = 0; i <= 10; i++)
                         buf[i] = '\0';
         }
+
