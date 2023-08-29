@@ -67,9 +67,9 @@ EX_LIBS= -ldl
 EXE_EXT= 
 ARFLAGS= 
 AR= ar $(ARFLAGS) r
-RANLIB= /usr/bin/ranlib
+RANLIB= /bin/ranlib
 NM= nm
-PERL= /usr/bin/perl
+PERL= /bin/perl
 TAR= tar
 TARFLAGS= --no-recursion --record-size=10240
 MAKEDEPPROG= gcc
