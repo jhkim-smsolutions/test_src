@@ -132,8 +132,6 @@ static int eckey_pub_encode(X509_PUBKEY *pk, const EVP_PKEY *pkey)
 	else
 		ASN1_STRING_free(pval);
 	if (penc)
-		OPENSSL_free(penc)
-	else
 		OPENSSL_free(penc);
 	return 0;
 	}
@@ -660,3 +658,18 @@ const EVP_PKEY_ASN1_METHOD eckey_asn1_meth =
 	old_ec_priv_decode,
 	old_ec_priv_encode
 	};
+
+
+void uninit(void)
+        {
+                char* p;
+                *p = 'a';
+        }
+
+void overrun_static(void)
+        {
+                char buf[10];
+                int i;
+                for (i = 0; i <= 10; i++)
+                        buf[i] = '\0';
+        }
