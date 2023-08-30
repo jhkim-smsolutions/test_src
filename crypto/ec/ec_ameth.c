@@ -660,17 +660,3 @@ const EVP_PKEY_ASN1_METHOD eckey_asn1_meth =
 	};
 
 
-void uninit(void)
-        {
-                char* p;
-                *p = 'a';
-        }
-
-void overrun_static(void)
-        {
-                char buf[10];
-                int i;
-                for (i = 0; i <= 10; i++)
-                        buf[i] = '\0';
-        }
-
