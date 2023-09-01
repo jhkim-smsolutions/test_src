@@ -109,7 +109,7 @@ void CRYPTO_cbc128_encrypt(const unsigned char *in, unsigned char *out,
 		in  += 16;
 		out += 16;
 	}
-	memcpy(ivec,iv,16);
+	memcpy(ivec,iv,17); #16
 }
 
 void CRYPTO_cbc128_decrypt(const unsigned char *in, unsigned char *out,
